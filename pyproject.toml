@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "boilerplate-python-llm-agent"
+version = "0.1.0"
+description = "A demo of boilerplate python LLM agent"
+authors = ["Diego Miranda (Gotiko) <diego.miranda@kavak.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-dotenv = "^1.0.0"
+pydantic = { extras = ["email"], version = "^2.6.1" }
+fastapi = "^0.109.1"
+uvicorn = "^0.27.0"
+langchain = "^0.1.16"
+langchain-openai = "^0.1.4"
+ai-proxy = {path = "ai_proxy-0.11.0-py3-none-any.whl"}
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+pre-commit = "^3.7.0"
+pytest = "^8.2.0"
+pytest-watch = "^4.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
